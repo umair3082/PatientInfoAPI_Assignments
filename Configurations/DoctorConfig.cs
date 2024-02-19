@@ -10,6 +10,10 @@ namespace PatientInfoAPI_Assignments.Configurations
         {
             builder.HasKey(d => d.DoctorId);
             builder.Property(d => d.DoctorName).IsRequired().HasMaxLength(100);
+            builder.Property(d => d.Spaciality).HasMaxLength(250);
+            builder.Property(d => d.PhoneNumber).HasMaxLength(15);
+            builder.Property(d => d.EmailAddress).HasMaxLength(250);
+
         }
     }
 }
